@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
-const { beforeDestroy } = require('../../models/users');
 const auth = require('../../utils/auth');
 
 router.get('/', (req,res)=>{

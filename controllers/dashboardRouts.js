@@ -11,15 +11,15 @@ router.get('/', auth, (req,res)=>{
         attributes: ['id','title','created_date','post_content'],
         include: [
             {
-                modal: Comment,
+                model: Comment,
                 attributes: ['id', 'comment_text','post_id','user_id','created_date'],
                 include: {
-                    modal: Comment,
+                    model: Comment,
                     attributes: ['username']
                 }
             },
             {
-                modal: User,
+                model: User,
                 attributes: ['username']
             }
         ]
@@ -45,15 +45,15 @@ router.get('/edit/:id', (req,res)=>{
         attributes: ['id','title','created_date','post_content'],
         include: [
             {
-                modal: Comment,
+                model: Comment,
                 attributes: ['id', 'comment_text','post_id','user_id','created_date'],
                 include: {
-                    modal: Comment,
+                    model: Comment,
                     attributes: ['username']
                 }
             },
             {
-                modal: User,
+                model: User,
                 attributes: ['username']
             }
         ]
